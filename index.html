@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sharon A | Cloud & Security Portfolio</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #0f172a;
+    color: #e2e8f0;
+    line-height: 1.6;
+  }
+  .container { max-width: 800px; margin: 0 auto; padding: 60px 24px; }
+  header { text-align: center; margin-bottom: 50px; }
+  h1 { font-size: 2.4rem; color: #ffffff; margin-bottom: 8px; }
+  .tagline { color: #38bdf8; font-size: 1.1rem; font-weight: 500; }
+  .badge-row { margin-top: 18px; display:flex; justify-content:center; gap:10px; flex-wrap:wrap; }
+  .badge {
+    background:#1e293b; color:#94a3b8; padding:6px 14px;
+    border-radius:20px; font-size:0.85rem; border:1px solid #334155;
+  }
+  section { margin-bottom: 40px; }
+  h2 {
+    font-size: 1.3rem; color:#38bdf8; margin-bottom: 16px;
+    border-bottom: 1px solid #1e293b; padding-bottom: 8px;
+  }
+  .card {
+    background:#1e293b; border-radius:10px; padding:20px 24px;
+    margin-bottom: 14px; border-left: 3px solid #38bdf8;
+  }
+  .card h3 { color:#fff; font-size:1.05rem; margin-bottom:6px; }
+  .card p { color:#94a3b8; font-size:0.95rem; }
+  .tech { margin-top:8px; font-size:0.8rem; color:#64748b; }
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+  }
+  .skill-item {
+    background:#1e293b; border-radius:8px; padding:12px 16px;
+    font-size:0.9rem; color:#94a3b8; border:1px solid #334155;
+    text-align:center;
+  }
+  .publication {
+    background:#1e293b; border-radius:10px; padding:20px 24px;
+    margin-bottom: 14px; border-left: 3px solid #818cf8;
+  }
+  .publication h3 { color:#fff; font-size:1.05rem; margin-bottom:6px; }
+  .publication p { color:#94a3b8; font-size:0.95rem; }
+  .pub-badge {
+    display:inline-block; margin-top:8px; font-size:0.8rem;
+    background:#312e81; color:#a5b4fc; padding:3px 10px;
+    border-radius:12px;
+  }
+  footer {
+    text-align:center; margin-top:60px; padding-top:24px;
+    border-top:1px solid #1e293b; color:#64748b; font-size:0.85rem;
+  }
+  footer a { color:#38bdf8; text-decoration:none; margin: 0 8px; }
+  footer a:hover { color:#7dd3fc; }
+  .arch {
+    background:#1e293b; border-radius:10px; padding:18px;
+    font-family: monospace; font-size:0.9rem; color:#38bdf8;
+    text-align:center; letter-spacing:0.5px;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Sharon A</h1>
+      <div class="tagline">Cloud Security & Threat Intelligence</div>
+      <div class="badge-row">
+        <span class="badge">AWS</span>
+        <span class="badge">Cybersecurity</span>
+        <span class="badge">CTI Research</span>
+        <span class="badge">PES University</span>
+        <span class="badge">Bangalore</span>
+      </div>
+    </header>
+
+    <section>
+      <h2>About</h2>
+      <p>Computer Science undergraduate at PES University, Bangalore, and Research Intern at CCNS (Centre for Cyber Network and Computer Security). Currently researching APT group TTP evolution using MITRE ATT&CK data, alongside building cloud-native security and DevOps projects on AWS targeting Cloud/DevOps and Security/SOC roles.</p>
+    </section>
+
+    <section>
+      <h2>AWS Projects</h2>
+
+      <div class="card">
+        <h3>Cloud Threat Detection Pipeline</h3>
+        <p>Automated security monitoring pipeline using GuardDuty for threat detection, EventBridge rules, Lambda for enrichment and severity triage, SNS for real-time alerts, and S3 for audit logging.</p>
+        <div class="tech">GuardDuty · EventBridge · Lambda · SNS · S3 · CloudWatch</div>
+      </div>
+
+      <div class="card">
+        <h3>Serverless URL Shortener with CI/CD</h3>
+        <p>A REST API built on Lambda and API Gateway with DynamoDB as the backend. Every push to main automatically deploys via GitHub Actions — zero manual deployment.</p>
+        <div class="tech">AWS Lambda · API Gateway · DynamoDB · GitHub Actions · IAM</div>
+      </div>
+
+      <div class="card">
+        <h3>Static Portfolio Site on S3 + CloudFront</h3>
+        <p>This very site — hosted on S3 with static website hosting and delivered globally over HTTPS via CloudFront CDN with cache invalidation.</p>
+        <div class="tech">Amazon S3 · CloudFront · IAM Policies</div>
+      </div>
+
+      <div class="card">
+        <h3>Secure VPC Architecture</h3>
+        <p>Multi-tier AWS VPC with public subnet (bastion host), private subnet (app server), and isolated subnet (database). Configured Security Groups and NACLs with least-privilege access.</p>
+        <div class="tech">VPC · EC2 · Security Groups · NACLs · NAT Gateway · Bastion Host</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Research & Publications</h2>
+
+      <div class="publication">
+        <h3>TemporalCTI — APT TTP Evolution Framework</h3>
+        <p>Research framework analyzing APT group TTP evolution over time using MITRE ATT&CK STIX data. Implements temporal decay scoring, defence gap analysis, and predictive modelling for threat intelligence.</p>
+        <span class="pub-badge">IEEE Access — In Progress</span>
+      </div>
+
+      <div class="publication">
+        <h3>Blockchain-Enabled Secure Communication for Implantable Pacemaker Networks</h3>
+        <p>Proposed Zero Trust Architecture for Pacemaker Systems (ZTAPS) using blockchain for secure communication in implantable medical devices.</p>
+        <span class="pub-badge">IEEE CONECCT 2026 — Accepted</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-item">AWS Cloud</div>
+        <div class="skill-item">Python</div>
+        <div class="skill-item">Linux</div>
+        
+        <div class="skill-item">Docker</div>
+        <div class="skill-item">GitHub Actions</div>
+        <div class="skill-item">MITRE ATT&CK</div>
+        <div class="skill-item">Web Security</div>
+        <div class="skill-item">SQL</div>
+        <div class="skill-item">Burp Suite</div>
+        <div class="skill-item">Wireshark</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>This Site's Architecture</h2>
+      <div class="arch">Browser → CloudFront (HTTPS/CDN) → S3 (Static Hosting)</div>
+    </section>
+
+    <footer>
+      <p>Built and deployed on AWS</p>
+      <p style="margin-top:8px;">
+        <a href="https://github.com/CodeWithSharon">GitHub</a> ·
+        <a href="https://www.linkedin.com/in/sharon-a-73a889382/">LinkedIn</a> ·
+        <a href="mailto:sharona022105@gmail.com">Email</a>
+      </p>
+    </footer>
+  </div>
+</body>
+</html>
